@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<udm.DeploymentPackage application="MVC_PORTAL" version="1.0">
+  <deployables>
+    <iis.WebContent name="WebPortal" file="MyMVCWebPortal">
+      <targetPath>{{WEBPORTALPATH}}</targetPath>
+      <scanPlaceholders></scanPlaceholders>
+      <excludeFileNamesRegex>EntityFramework.xml</excludeFileNamesRegex>
+    </iis.WebContent>
+    <iis.ApplicationSpec name="Web portal App">
+      <applicationPath>WebPortal</applicationPath>
+      <websiteName>{{WEBSITENAME}}</websiteName>
+      <physicalPath>{{WEBPORTALPATH}}</physicalPath>
+      <applicationPoolName>ASP.Net v4.0</applicationPoolName>
+    </iis.ApplicationSpec>
+  </deployables>
+</udm.DeploymentPackage>
